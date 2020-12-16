@@ -447,4 +447,4 @@ def get_nextReportToDispatch(db);
 	if db == []:
 		return None
 	def get_higherPriorityIncident(r1, r2):
-		
+		if(get_)
