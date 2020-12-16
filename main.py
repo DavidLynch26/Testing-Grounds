@@ -443,8 +443,12 @@ def get_highPriorityList(db):
 def is_HighPriority(r):
 	return get_incidentPriority(r) >= 90
 
-def get_nextReportToDispatch(db);
+def get_nextReportToDispatch(db):
 	if db == []:
 		return None
 	def get_higherPriorityIncident(r1, r2):
-		if(get_)
+		if(get_incidentPriority(r1) >= get_incidentPriority(r2)):
+			return r1
+		else:
+			return r2
+	return foldr(get_higherPriorityIncident, [], db)
